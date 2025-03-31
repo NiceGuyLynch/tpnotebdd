@@ -7,9 +7,9 @@ const Task = require('./models/Task');  // Importez le modèle Task
 const app = express();
 
 // Servir les fichiers statiques depuis le dossier "public"
-app.use(express.static('public'));  // Assurez-vous que "public" est le dossier où se trouve votre index.html
+app.use(express.static('public')); 
 
-mongoose.connect('mongodb://localhost:27017/task_manager', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb://localhost:27017/task_manager', { useNewUrlParser: true, useUnifiedTopology: true }) // Connexion à MongoDB
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.log('MongoDB connection error: ', err));
 
